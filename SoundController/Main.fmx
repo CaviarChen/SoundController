@@ -1,0 +1,89 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderStyle = Single
+  Caption = 'SoundController'
+  ClientHeight = 271
+  ClientWidth = 433
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Text1: TText
+    Position.X = 136.000000000000000000
+    Position.Y = 216.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    Text = '0 out of 0'
+    TextSettings.Font.Size = 19.000000000000000000
+  end
+  object Button_p: TButton
+    Position.X = 40.000000000000000000
+    Position.Y = 216.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Previous'
+  end
+  object Button_n: TButton
+    Position.X = 320.000000000000000000
+    Position.Y = 216.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Next'
+  end
+  object Panel1: TPanel
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 409.000000000000000000
+    Size.Height = 201.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object Text2: TText
+      Position.X = 24.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 369.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Current Action: Play XXXX.mp3'
+      TextSettings.HorzAlign = Leading
+    end
+    object Button_play: TButton
+      Position.X = 232.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 121.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Text4: TText
+        Size.Width = 161.000000000000000000
+        Size.Height = 121.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Play & Move to next'
+        TextSettings.Font.Size = 24.000000000000000000
+      end
+    end
+    object Text3: TText
+      Position.X = 24.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Hits:'
+      TextSettings.HorzAlign = Leading
+    end
+    object Text5: TText
+      Position.X = 24.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 97.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Play it when xxxxxxx'
+      TextSettings.Font.Size = 24.000000000000000000
+    end
+  end
+end
