@@ -58,7 +58,13 @@ end;
 function LoadConfig():integer;
 begin
   try
-    config := LoadJson(TPath.GetFullPath('.\config.json'));
+    {$IFDEF MSWINDOWS}
+       TDirectory.SetCurrentDirectory(TPath.GetDirectoryName(ParamStr(0)));
+    {$ELSE}
+       TDirectory.SetCurrentDirectory(TPath.GetDirectoryName(ParamStr(0))+'/../../../');
+    {$ENDIF}
+
+    config := LoadJson(TPath.GetFullPath('.'+TPath.AltDirectorySeparatorChar+'config.json'));
 
     if config.A['Actions'].Length = 0 then Exit(-2);
 
@@ -100,7 +106,6 @@ begin
     Text2.Text := 'Current Action: Change Volume ' + FloatToStr(config.A['Actions'].O[currentid].F['volume']);
 
 end;
-
 
 procedure TForm1.Button_backClick(Sender: TObject);
 begin
