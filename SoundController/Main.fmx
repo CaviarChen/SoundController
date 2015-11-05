@@ -10,6 +10,22 @@ object Form1: TForm1
   FormFactor.Devices = [Desktop]
   OnShow = FormShow
   DesignerMasterStyle = 0
+  object Button_back: TButton
+    Position.X = 168.000000000000000000
+    Position.Y = 152.000000000000000000
+    TabOrder = 5
+    Text = 'Back'
+    OnClick = Button_backClick
+  end
+  object Text6: TText
+    Position.X = 96.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 89.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Finish'
+    TextSettings.Font.Size = 24.000000000000000000
+  end
   object Text1: TText
     Position.X = 136.000000000000000000
     Position.Y = 216.000000000000000000
@@ -62,6 +78,7 @@ object Form1: TForm1
       Size.Height = 121.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
+      OnClick = Button_playClick
       object Text4: TText
         HitTest = False
         Size.Width = 161.000000000000000000
