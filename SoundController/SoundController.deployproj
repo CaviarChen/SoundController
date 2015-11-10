@@ -17,6 +17,33 @@
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='iOSDevice64'"/>
     <ItemGroup Condition="'$(Platform)'=='OSX32'">
+        <DeployFile Include="OSX32\Release\SoundController.entitlements" Condition="'$(Config)'=='Release'">
+            <RemoteDir>SoundController.app\../\</RemoteDir>
+            <RemoteName>SoundController.entitlements</RemoteName>
+            <DeployClass>ProjectOSXEntitlements</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+            <RemoteDir>SoundController.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="multimedia_volume_control.icns" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SoundController.app\Contents\Resources\</RemoteDir>
+            <RemoteName>SoundController.icns</RemoteName>
+            <DeployClass>ProjectOSXResource</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="OSX32\Debug\SoundController.info.plist" Condition="'$(Config)'=='Debug'">
             <RemoteDir>SoundController.app\Contents\</RemoteDir>
             <RemoteName>Info.plist</RemoteName>
@@ -44,6 +71,16 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="OSX32\Debug\SoundController" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SoundController.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>SoundController</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
         <DeployFile Include="OSX32\Release\SoundController" Condition="'$(Config)'=='Release'">
             <RemoteDir>SoundController.app\Contents\MacOS\</RemoteDir>
             <RemoteName>SoundController</RemoteName>
@@ -58,43 +95,6 @@
             <RemoteDir>SoundController.app\../\</RemoteDir>
             <RemoteName>SoundController.entitlements</RemoteName>
             <DeployClass>ProjectOSXEntitlements</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="OSX32\Release\SoundController.entitlements" Condition="'$(Config)'=='Release'">
-            <RemoteDir>SoundController.app\../\</RemoteDir>
-            <RemoteName>SoundController.entitlements</RemoteName>
-            <DeployClass>ProjectOSXEntitlements</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
-            <RemoteDir>SoundController.app\Contents\MacOS\</RemoteDir>
-            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
-            <DeployClass>DependencyModule</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="OSX32\Debug\SoundController" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>SoundController.app\Contents\MacOS\</RemoteDir>
-            <RemoteName>SoundController</RemoteName>
-            <DeployClass>ProjectOutput</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-            <Required>True</Required>
-        </DeployFile>
-        <DeployFile Include="multimedia_volume_control.icns" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>SoundController.app\Contents\Resources\</RemoteDir>
-            <RemoteName>SoundController.icns</RemoteName>
-            <DeployClass>ProjectOSXResource</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>

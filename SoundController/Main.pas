@@ -144,8 +144,8 @@ begin
   if config.A['Actions'].O[currentid].S['type']='play' then
     begin
       MediaPlayer[player].Stop;
-      MediaPlayer[player].Volume := config.A['Actions'].O[currentid].F['volume'];
       MediaPlayer[player].FileName := config.A['Actions'].O[currentid].S['file'];
+      MediaPlayer[player].Volume := config.A['Actions'].O[currentid].F['volume'];
       MediaPlayer[player].Play;
     end;
 
